@@ -91,13 +91,29 @@ Build sophisticated agents that can iteratively refine their outputs through fee
 For more detailed information, check out the official ADK documentation:
 - https://google.github.io/adk-docs/get-started/quickstart
 
-## Support
 
-Need help or run into issues? Join our free AI Developer Accelerator community on Skool:
-- [AI Developer Accelerator Community](https://www.skool.com/ai-developer-accelerator/about)
+# Git main commands
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ivesh/Google-adk-masterclass.git
+git push -u origin main
 
-In the community you'll find:
-- Weekly coaching and support calls
-- Early access to code from YouTube projects
-- A network of AI developers of all skill levels ready to help
-- Behind-the-scenes looks at how these apps are built
+That's a great idea for clarity! I can certainly provide you with a chronological table summarizing the workflow and the corresponding **GitHub commands** or actions for each step.
+
+## 🧑‍💻 GitHub Workflow and Commands
+
+
+| Step | Who | Action/Purpose | GitHub Command/Action |
+| :--- | :--- | :--- | :--- |
+| **1. Set up** | Team Member | **Clone the repository** to their local machine. | `git clone [repo_url]` |
+| **2. Update** | Team Member | **Create a new branch** for their feature/work. | `git checkout -b feature/my-new-agent` |
+| **3. Develop** | Team Member | **Make code changes** and stage them. | `git add .` |
+| **4. Commit** | Team Member | **Save changes** locally to their branch history. | `git commit -m "Implemented core agent logic"` |
+| **5. Push** | Team Member | **Upload the new branch** to GitHub. | `git push origin feature/my-new-agent` |
+| **6. Request Review** | Team Member | **Open a Pull Request (PR)** on GitHub, targeting `main`. | **GitHub UI Action:** Click the "Compare & pull request" button. |
+| **7. Review** | **You (Reviewer)** | **Check the code** in the PR for errors, style, and logic. | **GitHub UI Action:** Go to the PR, review "Files changed," and add comments. |
+| **8. Approve/Request Changes** | **You (Reviewer)** | **Submit your formal review** (approval is required for merge). | **GitHub UI Action:** Click "Review changes" $\rightarrow$ select **"Approve"** or **"Request changes."** |
+| **9. Merge** | **You (or Approved User)** | **Integrate the changes** into the protected `main` branch. | **GitHub UI Action:** Click the green **"Merge pull request"** button on the PR page (only active after approval). |
+| **10. Cleanup** | Team Member | **Sync their local `main` branch** with the new changes. | `git checkout main` $\rightarrow$ `git pull origin main` |
