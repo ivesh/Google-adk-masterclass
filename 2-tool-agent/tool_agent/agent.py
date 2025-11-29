@@ -8,6 +8,7 @@ from google.adk.tools import google_search
 #     return {
 #         "current_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
 #     }
+# https://ai.google.dev/gemini-api/docs/models#gemini-3-pro-preview
 
 root_agent = Agent(
     name="tool_agent",

@@ -4,12 +4,26 @@ import random
 from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 
-# https://docs.litellm.ai/docs/providers/openrouter
-model = LiteLlm(
-    model="openrouter/openai/gpt-4.1",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
-)
+from ollama import chat
+from groq import Groq
 
+
+from dotenv import load_dotenv
+
+# Load environment variables
+#load_dotenv()
+#groq_api_key = os.getenv("GROQ_API_KEY")
+#client=Groq(api_key=groq_api_key)
+#model=client.models.retrieve(model="qwen/qwen3-32b") #ChatGroq(model="qwen/qwen3-32b",groq_api_key=groq_api_key)
+
+
+#model=LiteLlm(model="ollama/gemma2:2b")
+
+model=LiteLlm(model="groq/qwen/qwen3-32b",api_key=os.getenv("GROQ_API_KEY"))
+
+
+
+#model=chat(model="gemma2:2b")
 
 def get_dad_joke():
     jokes = [
