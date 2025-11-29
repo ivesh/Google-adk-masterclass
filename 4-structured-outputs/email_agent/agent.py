@@ -15,7 +15,7 @@ class EmailContent(BaseModel):
 # --- Create Email Generator Agent ---
 root_agent = LlmAgent(
     name="email_agent",
-    model="gemini-2.0-flash",
+    model="gemini-2.0-flash-lite-001",
     instruction="""
         You are an Email Generation Assistant.
         Your task is to generate a professional email based on the user's request.
